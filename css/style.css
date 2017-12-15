@@ -3,11 +3,6 @@ body{
   font-family: 'Dancing Script', cursive;
 }
 
-a{
-  text-decoration: none;
-  color:#fff;
-}
-
 img{
   box-shadow: 2px 2px #02010a;
   width: 100%
@@ -16,7 +11,7 @@ img{
 header{
   text-align: left;
   color:#fff;
-  text-shadow: 2px 2px #02010a;
+  text-shadow: 2px 0px #02010a;
   border-radius: 10px;
   background-color: #5b7989;
   padding: 15px;
@@ -32,12 +27,16 @@ nav a {
     padding: 0 15px;
     font-size:20px;
     margin-top: 10px;
+    color:#fff;
+}
+
+nav a:hover, nav a:focus, nav a:active {
+  text-decoration: none;
 }
 
 h1 {
     display: inline;
     font-size: 1.5em;
-    float: left;
 }
 
 #main-container{
@@ -47,26 +46,42 @@ h1 {
 #picture1{
   width: 80%
 }
+#contenido-subpages  .flex-container {
+  padding: 0 15px;
+}
+#contenido-subpages .flex-container:nth-child(1) {
+    padding-top: 20px;
+}
 
 .flex-container {
   background-color: #d5c75f;
-  border: 1px #000;
   padding: 15px;
 }
 
-#picture2,#picture3{
-  width: 40%;
-  box-shadow: 2px 2px #82c3a6;
-  border:2px #000;
-  margin: 0 auto;
+.picture2, .picture3 {
+    width: 390px;
+    margin: 0 26px;
 }
 
-#picture2:hover{
+#picture2, #picture3 {
+    box-shadow: 2px 2px #82c3a6;
+    border:2px #000;
+}
+
+.picture2:hover, .picture2:focus{
   transform: rotate(10deg);
 }
 
-#picture3:hover{
+.picture3:hover, .picture3:focus{
   transform: translate(20px, -5px);
+}
+
+a.img-links {
+    margin-left: 45%;
+    line-height: 40px;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.3em;
 }
 
 footer{
@@ -77,12 +92,16 @@ footer{
 
 .footer-text a{
   color:#000;
+  text-decoration: none;
+}
+.footer-text strong {
+    font-size: 1.5em;
 }
 .footer-text:first-child {
     padding-top: 0;
 }
 
-#contenido{
+#contenido, #contenido-subpages{
   width: 100%;
   animation: mymove 2s;
 }
@@ -112,12 +131,15 @@ wrapper > div:nth-child(2) > .paisajes:nth-child(3) {
   .footer-text{
     padding: 20px;
   }
-  #contenido{
+  #contenido, #contenido-subpages{
     width: 900px;
     margin: 0 auto;
   }
   #main-container {
     padding: 5%;
+  }
+  #contenido-subpages .flex-container {
+      padding: 15px;
   }
   footer{
       columns:4;
@@ -129,6 +151,9 @@ wrapper > div:nth-child(2) > .paisajes:nth-child(3) {
   .flex-container {
     display: flex;
     flex-direction: row;
+  }
+  .footer-text strong {
+    font-size: 1.3em;
   }
 }
 
